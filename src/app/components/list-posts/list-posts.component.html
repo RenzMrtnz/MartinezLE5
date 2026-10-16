@@ -1,0 +1,20 @@
+<h2>Martinez Blog Posts</h2>
+
+<div *ngFor="let post of posts">
+  <h3>
+  <a [routerLink]="['/posts', post.id]">
+    {{ post.title }}
+  </a>
+</h3>
+
+  <p>
+    By {{ post.firstName }} {{ post.lastName }}
+    ({{ post.userName }})
+  </p>
+
+  <p>{{ post.dateCreated | date:'medium' }}</p>
+
+  <p>{{ post.body }}</p>
+
+  <hr>
+</div>
